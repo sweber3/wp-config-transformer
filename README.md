@@ -54,7 +54,7 @@ Let's reconsider a poorly-formatted example:
 
 ```php
                  define   (    'WP_DEBUG'   ,
-    false, false     )
+    false)
 ;
 ```
 
@@ -67,7 +67,7 @@ $config_transformer->update( 'constant', 'WP_DEBUG', 'true', array( 'raw' => tru
 Now we will get an output of:
 
 ```php
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 ```
 
 Nice!
