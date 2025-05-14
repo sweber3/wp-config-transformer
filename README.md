@@ -67,7 +67,7 @@ $config_transformer->update( 'constant', 'WP_DEBUG', 'true', array( 'raw' => tru
 Now we will get an output of:
 
 ```php
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 ```
 
 Nice!
@@ -161,7 +161,7 @@ Will give us a result that safely changes _only_ the value, leaving the formatti
 
 ```php
                  define   (    'WP_DEBUG'   ,
-    true, false     )
+    false, false     )
 ;
 ```
 
@@ -193,15 +193,15 @@ Of course the exception to this is if you are using the `add => false` option, i
 
 **CORRECT**
 ```php
-define( 'WP_DEBUG', true );
-define( 'WP_SCRIPT_DEBUG', true );
+define( 'WP_DEBUG', false );
+define( 'WP_SCRIPT_DEBUG', false );
 $table_prefix = 'wp_';
 $my_var = 'foo';
 ```
 
 **INCORRECT**
 ```php
-define( 'WP_DEBUG', true ); define( 'WP_SCRIPT_DEBUG', true );
+define( 'WP_DEBUG', false ); define( 'WP_SCRIPT_DEBUG', false );
 $table_prefix = 'wp_'; $my_var = 'foo';
 ```
 
